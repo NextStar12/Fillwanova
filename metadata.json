@@ -1,0 +1,10 @@
+{
+  "name": "MaintiX Ticketing Maintenance System",
+  "description": "Sistem Ticketing Maintenance lengkap dengan RBAC, penjadwalan preventif, checklist visit, audit log, kamera khusus GA, ekspor excel, dan laporan PDF bertanda tangan digital.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

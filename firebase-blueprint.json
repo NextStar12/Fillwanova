@@ -1,0 +1,96 @@
+{
+  "entities": {
+    "Ticket": {
+      "title": "Ticket",
+      "description": "Sistem tiket penanganan kerusakan fasilitas gedung",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique ID of the Ticket"
+        },
+        "title": {
+          "type": "string",
+          "description": "Brief summary of the issue"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the issue"
+        },
+        "category": {
+          "type": "string",
+          "description": "Ticket category (e.g. AC, Electrical, Plumbing, IT, Civil, Cleanliness)"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Low, Medium, High, or Emergency"
+        },
+        "status": {
+          "type": "string",
+          "description": "Current status (Draft, Submitted, In Progress, Pending Approval, Completed, Rejected)"
+        },
+        "location": {
+          "type": "string",
+          "description": "Specific building/floor/room location"
+        },
+        "reportedBy": {
+          "type": "object",
+          "description": "Details of the reporting user"
+        },
+        "assignedTo": {
+          "type": "object",
+          "description": "Details of the assigned Technician or GA"
+        },
+        "supervisorId": {
+          "type": "string",
+          "description": "ID of Supervisor responsible for approval"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "checklist": {
+          "type": "array"
+        },
+        "photoUrl": {
+          "type": "string"
+        },
+        "workNotes": {
+          "type": "string"
+        },
+        "technicianSignature": {
+          "type": "string"
+        },
+        "supervisorSignature": {
+          "type": "string"
+        },
+        "approvalDate": {
+          "type": "string"
+        },
+        "rejectionReason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "category",
+        "priority",
+        "status",
+        "location",
+        "reportedBy",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/tickets/{ticketId}": {
+      "schema": "Ticket",
+      "description": "Collection storing all facility maintenance tickets"
+    }
+  }
+}
